@@ -25,6 +25,9 @@ jobs:
       - run:
         name: "Print Output FIle"
         command: cat output.txt
+      - persist_to_workspace :
+         root: .
+         path: output.txt
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
